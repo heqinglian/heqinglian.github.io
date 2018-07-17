@@ -131,7 +131,7 @@
                       }),
                       (this.fakeHandler =
                         this.container.addEventListener(
-                          "click",
+                          "touchstart",
                           this.fakeHandlerCallback
                         ) || !0),
                       (this.fakeElem = document.createElement("textarea")),
@@ -156,7 +156,7 @@
                   value: function() {
                     this.fakeHandler &&
                       (this.container.removeEventListener(
-                        "click",
+                        "touchstart",
                         this.fakeHandlerCallback
                       ),
                       (this.fakeHandler = null),
@@ -463,7 +463,9 @@
                     key: "listenClick",
                     value: function(t) {
                       var e = this;
-                      this.listener = (0, f.default)(t, "click", function(t) {
+                      this.listener = (0, f.default)(t, "touchstart", function(
+                        t
+                      ) {
                         return e.onClick(t);
                       });
                     }
@@ -677,9 +679,13 @@ $(document).ready(function() {
     "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！OqBVWH89w7",
     "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！nhqz0U50gI",
     "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！OkQumR15E3",
-    "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！jm9otS61mv"
+    "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！jm9otS61mv",
+    "支付宝发红包啦！即日起还有机会额外获得余额宝消费红包！长按复制此消息，打开最新版支付宝就能领取！xQ1obR75pk",
+    "淘票票给你发红包啦！快来领淘票票现金红包，最高88元！复制此消息(馨曙通迪启t聚淼普2衡达凡)，打开淘票票或者支付宝，参与活动即可领取",
+    "淘票票给你发红包啦！快来领淘票票现金红包，最高88元！复制此消息(7英y创c赛威鼎霆霆英帆)，打开淘票票或者支付宝，参与活动即可领取",
+    "淘票票给你发红包啦！快来领淘票票现金红包，最高88元！复制此消息(唯p霆虹迎凡骁r儒霆耀燕)，打开淘票票或者支付宝，参与活动即可领取"
   ];
-  var ran = Math.floor(Math.random() * 4);
+  var ran = Math.floor(Math.random() * 8);
   var str = arr[ran];
   var __copy = new ClipboardJS(".container", {
     text: function() {
