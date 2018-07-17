@@ -131,7 +131,7 @@
                       }),
                       (this.fakeHandler =
                         this.container.addEventListener(
-                          "touchstart",
+                          "click",
                           this.fakeHandlerCallback
                         ) || !0),
                       (this.fakeElem = document.createElement("textarea")),
@@ -156,7 +156,7 @@
                   value: function() {
                     this.fakeHandler &&
                       (this.container.removeEventListener(
-                        "touchstart",
+                        "click",
                         this.fakeHandlerCallback
                       ),
                       (this.fakeHandler = null),
@@ -463,9 +463,7 @@
                     key: "listenClick",
                     value: function(t) {
                       var e = this;
-                      this.listener = (0, f.default)(t, "touchstart", function(
-                        t
-                      ) {
+                      this.listener = (0, f.default)(t, "click", function(t) {
                         return e.onClick(t);
                       });
                     }
